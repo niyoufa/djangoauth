@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
-from djangouser.views import Login,Logout
+from djangouser.auth_views import auth_login, auth_logout
 
 urlpatterns = patterns('',
-    url(r'^login/$', Login.as_view()),
-    url(r'^logout/$', Logout.as_view()),
+    url(r'^login/$', auth_login),
+    url(r'^logout/$', auth_logout),
 )

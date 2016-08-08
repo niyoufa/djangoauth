@@ -10,6 +10,8 @@ from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.renderers import JSONRenderer
 
+from djangouser.serializers import UserSerializer
+
 class JSONResponse(HttpResponse):
     """
     An HttpResponse that renders its content into JSON.
